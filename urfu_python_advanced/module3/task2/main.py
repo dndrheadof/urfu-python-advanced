@@ -2,9 +2,7 @@ import re
 
 
 def decrypt(text: str):
-    while text.count("..") > 0:
-        if set(text) == {"."}:
-            text = text.replace(".", "")
-        text = re.sub(".\.\.", "", text)
+    while ".." in text:
+        text = re.sub(".\.{2}", "", text, count=1)
 
     return text.replace(".", "")

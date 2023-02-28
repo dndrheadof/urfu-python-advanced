@@ -10,7 +10,7 @@ class TestDecrypt(unittest.TestCase):
         self.assertEqual(decrypt("абра--..кадабра"), "абра-кадабра")
         self.assertEqual(decrypt("абрау...-кадабра"), "абра-кадабра")
         self.assertEqual(decrypt("абра........"), "")
-        self.assertEqual(decrypt("абр......a."), "а")
+        self.assertEqual(decrypt("абр......а."), "а")
         self.assertEqual(decrypt("1..2.3"), "23")
         self.assertEqual(decrypt("."), "")
         self.assertEqual(decrypt("1......................."), "")
