@@ -19,7 +19,7 @@ jobs:
         pip install coverage
         coverage run -m unittest discover tests -v
     - name: Upload Coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v2
     - name: Wemake Python Stylguide
       uses: wemake-services/wemake-python-styleguide@0.13.4
       continue-on-error: true
