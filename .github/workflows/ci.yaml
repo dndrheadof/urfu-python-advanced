@@ -10,20 +10,16 @@ jobs:
     - uses: checkout@v2
       with:
         fetch-depth: '2'
-      
     - name: Setup Python
       uses: actions/setup-python@master
       with:
         python-version: 3.9
-
     - name: Generate Report
       run: |
         pip install coverage
         coverage run -m unittest
-    
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v3
-
     - name: Wemake Python Stylguide
       uses: wemake-services/wemake-python-styleguide@0.13.4
       continue-on-error: true
