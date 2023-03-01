@@ -7,7 +7,7 @@ jobs:
       OS: ubuntu-latest
       PYTHON: "3.9"
     steps:
-      - uses: checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: "2"
       - name: Setup Python
@@ -17,9 +17,10 @@ jobs:
       - name: Generate Report
         run: |
           pip install coverage
+          pip install -r requirements.txt
           coverage run -m unittest discover tests -v
       - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
       - name: Wemake Python Stylguide
         uses: wemake-services/wemake-python-styleguide@0.13.4
         continue-on-error: true
