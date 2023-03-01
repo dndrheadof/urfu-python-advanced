@@ -14,3 +14,4 @@ class TestDecrypt(unittest.TestCase):
         self.assertEqual(decrypt("1..2.3"), "23")
         self.assertEqual(decrypt("."), "")
         self.assertEqual(decrypt("1......................."), "")
+        self.assertEqual(decrypt("te...st.."), "ts")
