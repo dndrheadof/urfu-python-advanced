@@ -16,8 +16,7 @@ def ps():
     args: list[str] = request.args.getlist('arg')
 
     command_args = shlex.quote("".join(args))
-    result = subprocess.run(f'ps {command_args}',
-                            shell=True, capture_output=True, )
+    result = subprocess.run(f'ps {command_args}', capture_output=True, )
 
     return f"<pre>{result.stdout}</pre>"
 
