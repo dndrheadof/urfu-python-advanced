@@ -10,6 +10,9 @@ packages = [{ include = "urfu_python_advanced" }]
 python = "^3.10"
 flask = "^2.2.3"
 freezegun = "^1.2.2"
+wtforms = "^3.0.1"
+flask-wtf = "^1.1.1"
+email-validator = "^1.3.1"
 
 [tool.poetry.group.dev.dependencies]
 autopep8 = "^2.0.1"
