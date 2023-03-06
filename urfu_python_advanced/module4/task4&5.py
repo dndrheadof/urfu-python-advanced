@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/uptime")
 def uptime():
-    result = subprocess.run("uptime", capture_output=True)
+    result = subprocess.run(f'uptime', capture_output=True)
     return str(result.stdout).split()[3][:-1]
 
 
