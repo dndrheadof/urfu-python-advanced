@@ -13,7 +13,7 @@ def start_server(port: int):
             os.kill(int(result[1].split()[1]), 9)
         app = Flask(__name__)
         app.run(port=port)
-    except:
+    except Exception:
         r.kill()
 
 

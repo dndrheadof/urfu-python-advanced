@@ -1,9 +1,8 @@
-from flask import Flask, request
+from flask import Flask
 import subprocess
-import shlex
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, Field
-from wtforms.validators import InputRequired, Email, ValidationError, NumberRange
+from wtforms import StringField, IntegerField
+from wtforms.validators import InputRequired, NumberRange
 
 
 app = Flask(__name__)
@@ -29,7 +28,7 @@ def run_code():
             if errors:
                 return errors
             return output
-        except:
+        except Exception:
             r.kill()
             raise ValueError("Timeout reached")
 
