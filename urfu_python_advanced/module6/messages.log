@@ -1,0 +1,5 @@
+{"time": "05:00:01", "level": "CRITICAL", "message": "Сообщение"}
+{"time": "16:27:37", "level": "INFO", "message": "Сообщение dog"}
+{"time": "16:27:38", "level": "WARNING", "message": "Сообщение текст рыба вода dog"}
+{"time": "18:27:38", "level": "WARNING", "message": "Сообщение"}
+{"time": "18:27:39", "level": "INFO", "message": "Сообщение dog"}
