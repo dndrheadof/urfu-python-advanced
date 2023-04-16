@@ -1,0 +1,18 @@
+<--""
+   Level WARNING
+   |
+   o<--"app"
+   |   Level DEBUG
+   |   Handler Stream <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+   |     Level DEBUG
+   |     Filter <logging_config.IsASCII object at 0x7fe435156680>
+   |     Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
+   |   Handler <FileByLevelHandler (DEBUG)>
+   |     Level DEBUG
+   |     Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
+   |
+   o<--"utils"
+       Level INFO
+       Handler TimedRotatingFile '/home/dndrhead/projects/urfu/urfu-python-advanced/urfu_python_advanced/module7/utils.log' when='H' interval=36000 backupCount=1
+         Level INFO
+         Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
