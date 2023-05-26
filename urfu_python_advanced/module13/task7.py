@@ -15,9 +15,7 @@ def register(username: str, password: str) -> None:
 
 def hack() -> None:
     username: str = "username"
-    password: str = (
-        "password'); delete from table_users; --"  # или любой другой sql запрос
-    )
+    password: str = "password'); delete from table_users; --"
     register(username, password)
 
 
