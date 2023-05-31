@@ -1,6 +1,6 @@
 FROM python:3.8
 
-RUN apt-get update && apt-get install -y python3-dev supervisor nginx  \
+RUN apt-get update && apt-get install -y python3-dev supervisor nginx --no-install-recommends  \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/
